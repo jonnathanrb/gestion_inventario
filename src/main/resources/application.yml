@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev  # Perfil activo
+
+  application:
+    name: "inventario"
+
+  # Configuración común de la base de datos
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+
+# Configuración común del servidor
+server:
+  port: 8080

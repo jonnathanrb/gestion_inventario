@@ -1,0 +1,13 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/${DB_NAME:prod_database}?useSSL=true&serverTimezone=UTC
+    username: ${DB_USERNAME:prod_user}
+    password: ${DB_PASSWORD:changeit}
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 30000
+  jpa:
+    show-sql: false
